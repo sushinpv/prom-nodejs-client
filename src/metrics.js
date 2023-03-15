@@ -57,7 +57,7 @@ function responseLengthGenerator(labelNames, buckets, prefix = "") {
 /**
  * Histogram which is used to capture the application errors
  */
-const restErrorResponseHistogram = new client.Histogram({
+const restErrorResponseHistogram = new Prometheus.Histogram({
   name: "nodejs_error_responses",
   help: "NodeJs Application Errors",
   buckets: [10],
