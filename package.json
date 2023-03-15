@@ -1,10 +1,11 @@
 {
   "name": "prom-nodejs-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src/index.js",
   "files": [
     "src/"
   ],
+  "types": "src/index.d.ts",
   "type": "module",
   "repository": "https://sushinpv-upgrad@bitbucket.org/exampur/exampur-nodejs-prom-client.git",
   "author": "Sushin Pv <sushinpv@gmail.com>",
