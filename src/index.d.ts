@@ -22,7 +22,7 @@ export type Options = {
  * @param controller
  * @param error
  */
-declare function metricsLogError(controller: string, error: Error) {};
+export declare function metricsLogError(controller: string, error: Error) {};
 
 /**
  * Returns a request middleware to expose all the metrics route
