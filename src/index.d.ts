@@ -28,7 +28,7 @@ export declare function metricsLogError(controller: string, error: Error) {};
  * Function which is used to parse the error message and return the error string
  * @param error
  */
-export declare function parseError(error: Error) {};
+export declare function parseError(error: Error): string {};
 
 
 /**

@@ -26,7 +26,7 @@ const defaultOptions = {
 
 /**
  * Function which is used to parse the error
- * @param { ex } error 
+ * @param { ex } error
  */
 export const parseError = (error) => {
   let parsedError = null;
@@ -36,6 +36,7 @@ export const parseError = (error) => {
   } catch (err) {
     parsedError = error;
   }
+  return parsedError;
 };
 
 /**
