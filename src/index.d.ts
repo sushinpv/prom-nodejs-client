@@ -25,6 +25,13 @@ export type Options = {
 export declare function metricsLogError(controller: string, error: Error) {};
 
 /**
+ * Function which is used to parse the error message and return the error string
+ * @param error
+ */
+export declare function parseError(error: Error) {};
+
+
+/**
  * Returns a request middleware to expose all the metrics route
  */
 export default (options: Options): Express => {};

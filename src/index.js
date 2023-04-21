@@ -25,18 +25,26 @@ const defaultOptions = {
 };
 
 /**
+ * Function which is used to parse the error
+ * @param { ex } error 
+ */
+export const parseError = (error) => {
+  let parsedError = null;
+  try {
+    parsedError = JSON.stringify(error);
+    if (parsedError === "{}") parsedError = error.toString();
+  } catch (err) {
+    parsedError = error;
+  }
+};
+
+/**
  * Function which is used to log error to metrics server
  * @param { string } controller
  * @param { Error } error
  */
 export const metricsLogError = (controller, error) => {
-  let parsedError = null;
-  try {
-    parsedError = error.toString();
-  } catch (err) {
-    parsedError = JSON.stringify(error);
-  }
-
+  let parsedError = parseError(error);
   if (parsedError && !error?.status) restErrorResponseHistogram.observe({ controller, error: parsedError }, 10);
 };
 
