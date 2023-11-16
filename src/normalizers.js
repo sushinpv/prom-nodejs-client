@@ -18,7 +18,7 @@ import UrlValueParser from "url-value-parser";
  * values in the URL.
  * @param {string} [placeholder='#val'] - the placeholder that will replace id
  * like params in the url path.
- * @returns {string} a normalized path, withoud ids.
+ * @returns {string} a normalized path, without ids.
  */
 function normalizePath(originalUrl, extraMasks = [], placeholder = "#val") {
   const { pathname } = url.parse(originalUrl);

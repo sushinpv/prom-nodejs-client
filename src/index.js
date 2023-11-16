@@ -14,7 +14,7 @@ const defaultOptions = {
   collectDefaultMetrics: true,
   collectGCMetrics: false,
   // buckets for response time from 0.05s to 2.5s
-  // these are arbitrary values since i dont know any better ¯\_(ツ)_/¯
+  // these are arbitrary values since i don't know any better ¯\_(ツ)_/¯
   requestDurationBuckets: Prometheus.exponentialBuckets(0.05, 1.75, 8),
   requestLengthBuckets: [],
   responseLengthBuckets: [],
@@ -153,7 +153,7 @@ export default (userOptions = {}) => {
       }
 
       // the requester failed to authenticate, then return next, so we don't
-      // hint at the existance of this route
+      // hint at the existence of this route
       if (!result) {
         return next();
       }
